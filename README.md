@@ -55,3 +55,22 @@ npm run start
 ```
 
 Se podrá acceder a través del navegador con la url [http://localhost:3000](http://localhost:3000)
+
+## Pruebas
+
+Dentro de la carpeta `back_end`:
+```bash
+# Ejecutar el servidor de la api
+python manage.py runserver
+```
+Dentro de la carpeta `front_end`:
+```bash
+# Ejecutar las pruebas
+npm run test
+```
+* En caso de que luego de utilizar el comando `npm run test` aparezca el mensaje:
+
+        No tests found related to files changed since last commit.
+        Press `a` to run all tests, or run Jest with `--watchAll`.
+
+  Seleccionar la terminal y persionar la tecla 'a' ejecutarán las pruebas.
