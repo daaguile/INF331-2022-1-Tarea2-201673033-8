@@ -28,6 +28,9 @@ Dentro de la carpeta `back_end`:
 # Crear un entorno virtual
 python -m venv .venv
 
+# Activar entorno virtual
+source .venv/bin/activate
+
 # Actualizar pip
 python -m pip install --upgrade pip
 
@@ -41,7 +44,7 @@ python manage.py migrate
 
 ### Back-End
 
-Dentro de la carpeta `back_end`:
+Dentro de la carpeta `back_end` con entorno virutal activado:
 ```bash
 # Ejecutar el servidor de la api
 python manage.py runserver
@@ -58,7 +61,7 @@ Se podrá acceder a través del navegador con la url [http://localhost:3000](htt
 
 ## Pruebas
 
-Dentro de la carpeta `back_end`:
+Dentro de la carpeta `back_end` con entorno virutal activado:
 ```bash
 # Ejecutar el servidor de la api
 python manage.py runserver
