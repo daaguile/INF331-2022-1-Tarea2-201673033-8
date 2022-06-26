@@ -1,5 +1,4 @@
 import Enzyme, { shallow } from 'enzyme';
-import { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import React from 'react';
@@ -116,7 +115,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid last name: empty', async () => {
@@ -136,7 +135,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid second last name: empty', async () => {
@@ -156,7 +155,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid email: empty', async () => {
@@ -176,7 +175,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid phone: empty', async () => {
@@ -196,7 +195,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid name: over max length (26 chars)', async () => {
@@ -215,7 +214,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid last name: over max length (26 chars)', async () => {
@@ -234,7 +233,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid second last name: over max length (26 chars)', async () => {
@@ -253,7 +252,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid phone: length less than 9', async () => {
@@ -273,7 +272,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid phone: length more than 9', async () => {
@@ -293,7 +292,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid name: includes non letter char', async () => {
@@ -313,7 +312,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid last name: includes non letter char', async () => {
@@ -333,7 +332,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid second last name: includes non letter char', async () => {
@@ -353,7 +352,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid email: wrong format', async () => {
@@ -373,7 +372,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
 
             test('With invalid phone: includes non number char', async () => {
@@ -393,7 +392,7 @@ describe('App', () => {
                     />);
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().createContact()).toBe(true);
+                expect(await modalComponent.instance().createContact()).toBe(false);
             });
         })
 
@@ -491,7 +490,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid last name: empty', async () => {
@@ -513,7 +512,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid second last name: empty', async () => {
@@ -535,7 +534,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid email: empty', async () => {
@@ -557,7 +556,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid phone: empty', async () => {
@@ -579,7 +578,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid name: over max length (26 chars)', async () => {
@@ -601,7 +600,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid last name: over max length (26 chars)', async () => {
@@ -624,7 +623,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid second last name: over max length (26 chars)', async () => {
@@ -647,7 +646,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid phone: length less than 9', async () => {
@@ -669,7 +668,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid phone: length more than 9', async () => {
@@ -691,7 +690,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid name: includes non letter char', async () => {
@@ -713,7 +712,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid last name: includes non letter char', async () => {
@@ -735,7 +734,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid second last name: includes non letter char', async () => {
@@ -757,7 +756,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid email: wrong format', async () => {
@@ -779,7 +778,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
 
             test('With invalid phone: includes non number char', async () => {
@@ -801,7 +800,7 @@ describe('App', () => {
 
                 modalComponent.setState(state);
 
-                expect(await modalComponent.instance().editContact()).toBe(true);
+                expect(await modalComponent.instance().editContact()).toBe(false);
             });
         })
 
@@ -810,7 +809,7 @@ describe('App', () => {
     describe('Delete an contact', () => {
         test('With id', async () => {
 
-            const modalDeleteComponent = mount(
+            const modalDeleteComponent = shallow(
                 <ConfirmRemovalModal
                     resetState={() => { }}
                 />);
