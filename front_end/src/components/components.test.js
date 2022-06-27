@@ -14,7 +14,7 @@ let contactId
 
 // Initialize database
 beforeAll(async () => {
-
+    await axios.get(`${API_URL}deleteAll`);
     // Create a new contact for editing and deleting
     const res = await axios.post(API_URL, {
         name: 'initialName',
