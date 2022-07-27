@@ -76,4 +76,4 @@ npm run test
         No tests found related to files changed since last commit.
         Press `a` to run all tests, or run Jest with `--watchAll`.
 
-  Seleccionar la terminal y persionar la tecla 'a' ejecutarán las pruebas.
+  Seleccionar la terminal y persionar la tecla 'a' ejecutarán las pruebas
