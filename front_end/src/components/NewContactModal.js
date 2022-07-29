@@ -22,6 +22,7 @@ export default class NewContactModal extends Component {
             title = "Crear Contacto";
             button = (
                 <Button
+                    id="add-contact-button"
                     color="primary"
                     className="float-right"
                     onClick={this.toggle}

@@ -11,7 +11,7 @@ export default class ContactList extends Component {
         return (
             <Fragment>
                 <h1>Contactos</h1>
-                <Table responsive striped>
+                <Table id="contactlist" responsive striped>
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -22,10 +22,10 @@ export default class ContactList extends Component {
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tableBody">
                         {!contacts || contacts.length <= 0 ? (
                             <tr>
-                                <td colSpan="6" align="center">
+                                <td id="noContacts" colSpan="6" align="center">
                                     <b>No hay contactos</b>
                                 </td>
                             </tr>
@@ -41,6 +41,7 @@ export default class ContactList extends Component {
                                         <NewContactModal
                                             create={false}
                                             contact={contact}
+                                            contactID={contact.id}
                                             resetState={this.props.resetState}
                                         />
                                         &nbsp;&nbsp;

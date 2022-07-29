@@ -275,7 +275,7 @@ export default class NewContactForm extends React.Component {
                         </FormFeedback>
                     </FormGroup>
 
-                    <Button color='primary' disabled={!this.state.formValid}>
+                    <Button id="send" color='primary' disabled={!this.state.formValid}>
                         Enviar
                     </Button>
                 </Form>
